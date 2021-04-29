@@ -1,50 +1,39 @@
+import { RepositoryItem } from "./RepositoryItem";
+import {RepositoryEspace} from "./RepositoryIEspace";
+
+
+const struct = {
+    name: 'Unão brabo',
+    description: 'Carro ligeiro',
+    link: 'https://github.com'
+}
+
 export function RepositoryList(){
 
-
-
     return(
-        <section> classNome="Repository-list" 
-            <h1>Lista de repositórios</h1>
+        <section className = "Repository-list"> 
+            <h1>Lista de repositórioos</h1>
+
+            <br/>
 
             <ul>
-                <li>
-                    <strong>Unform</strong>
+                <RepositoryItem struct={struct} />
+                <RepositoryEspace/>
 
-                    <p>Forms in React</p>
+                <RepositoryItem struct={struct} />
+                <RepositoryEspace/>
 
-                    <a href="">
-                        Acessar repositório
-                    </a>
-
-                    
-                </li>
-
-                <li>
-                    <strong>Unform</strong>
-
-                    <p>Forms in React</p>
-
-                    <a href="">
-                        Acessar repositório
-                    </a>
-
-                    
-                </li>
-
-                <li>
-                    <strong>Unform</strong>
-
-                    <p>Forms in React</p>
-
-                    <a href="">
-                        Acessar repositório
-                    </a>
-
-                    
-                </li>
+                <RepositoryItem struct={struct} />
+                <RepositoryEspace/>
+                
+                <RepositoryItem struct={struct} />
+                <RepositoryEspace/>
+                <br/>
             </ul>
 
 
         </section>
+
+        
     )
 }
